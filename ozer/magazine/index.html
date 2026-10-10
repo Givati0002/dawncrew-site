@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>גיליון 001 · מגזין המשרד האחורי | OZER</title>
+<meta name="description" content="מגזין שבועי חינמי של OZER: משימה אחת להוריד מהראש, כלי אחד שעובד בעברית, ושיעור אחד מהשטח.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;600;700&family=Azeret+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* OZER magazine: the OZER portal brand (petrol + brass, Suez One / Assistant / Azeret Mono). One reading column, story cards, a calculator as the weekly gift. */
+:root { --bg: #E9ECEF; --surface: #FBFCFD; --surface-2: #F1F4F6; --ink: #10171F; --soft: #3C4955; --muted: #5E6B77; --rule: #CDD5DC;
+  --petrol: #1D5B78; --petrol-soft: #D8E6ED; --brass: #8C6410; --deep: #0F2A38; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0C1218; --surface: #131B23; --surface-2: #0F161D; --ink: #E8EDF2; --soft: #BAC6D1;
+  --muted: #8C99A5; --rule: #24313D; --petrol: #4E97B8; --petrol-soft: #16303D; --brass: #C9A24B; --deep: #0A1C26; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg: #0C1218; --surface: #131B23; --surface-2: #0F161D; --ink: #E8EDF2; --soft: #BAC6D1;
+  --muted: #8C99A5; --rule: #24313D; --petrol: #4E97B8; --petrol-soft: #16303D; --brass: #C9A24B; --deep: #0A1C26; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.85 "Assistant", "Segoe UI", sans-serif; }
+a { color: var(--petrol); text-underline-offset: .2em; }
+img { display: block; max-width: 100%; height: auto; }
+.nav { max-width: 1040px; margin: auto; padding: 20px; display: flex; align-items: center; gap: 16px; border-bottom: 1px solid var(--rule); }
+.logo { font-family: "Suez One", serif; font-size: 30px; color: var(--petrol); text-decoration: none; line-height: 1; }
+.label { font: 12px "Azeret Mono", monospace; letter-spacing: .18em; color: var(--muted); }
+.nav .back { margin-inline-start: auto; font-size: 15px; }
+.wrap { max-width: 1040px; margin: auto; padding: 44px 20px 80px; }
+.mono { font-family: "Azeret Mono", monospace; font-size: 13px; letter-spacing: .08em; color: var(--brass); }
+h1, h2, h3 { font-family: "Suez One", serif; font-weight: 400; line-height: 1.2; }
+.mast h1 { font-size: clamp(44px, 7vw, 82px); margin: 14px 0 18px; }
+.mast h1 span { color: var(--petrol); }
+.deck { font-size: 22px; color: var(--soft); max-width: 780px; }
+.cover { margin: 34px 0 10px; }
+.note { max-width: 760px; font-size: 19px; border-inline-start: 3px solid var(--brass); padding-inline-start: 18px; margin: 34px 0 0; }
+.sec-h { border-top: 1px solid var(--rule); margin-top: 56px; padding-top: 24px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.sec-h h2 { margin: 0; font-size: 30px; }
+.stories { display: grid; gap: 30px; max-width: 860px; margin: 26px auto 0; }
+.story { background: var(--surface); border: 1px solid var(--rule); }
+.story-copy { padding: 28px 34px 30px; }
+.story h2 { font-size: clamp(26px, 3.4vw, 36px); margin: 8px 0 14px; }
+.story p { color: var(--soft); margin: 0 0 16px; }
+.story ul, .story ol { color: var(--soft); padding-inline-start: 22px; margin: 0 0 16px; display: grid; gap: 6px; }
+.story b { color: var(--ink); }
+.box { background: var(--petrol-soft); padding: 16px 20px; margin: 6px 0 0; }
+.box p:last-child { margin: 0; }
+.src { font-size: 14px; color: var(--muted); }
+details.more summary { cursor: pointer; color: var(--petrol); font-weight: 700; margin: 4px 0 14px; }
+/* gift */
+.gift { margin-top: 56px; background: var(--deep); color: #E8EDF2; padding: 36px; }
+.gift h2 { font-size: clamp(28px, 4vw, 40px); margin: 6px 0 10px; color: #fff; }
+.gift p { color: #BAC6D1; }
+.calc { display: grid; gap: 10px; margin-top: 20px; }
+.row { display: grid; grid-template-columns: minmax(0, 1fr) 110px; gap: 12px; align-items: center; border-bottom: 1px solid #24313D; padding-bottom: 10px; }
+.row label { font-size: 17px; }
+.row input, .rate input { width: 100%; font: 18px "Azeret Mono", monospace; padding: 8px 10px; background: #131B23; color: #fff; border: 1px solid #4E97B8; text-align: center; }
+.rate { display: grid; grid-template-columns: minmax(0, 1fr) 140px; gap: 12px; align-items: center; margin-top: 8px; }
+.out { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 22px; }
+.out div { background: #131B23; padding: 16px 18px; border: 1px solid #24313D; }
+.out b { display: block; font: 30px "Azeret Mono", monospace; color: #C9A24B; direction: ltr; text-align: right; }
+.out span { font-size: 14px; color: #8C99A5; }
+.gift .fine { font-size: 14px; margin-top: 14px; }
+.next { max-width: 760px; margin-top: 56px; }
+.next h2 { font-size: 30px; margin: 8px 0; }
+footer { border-top: 1px solid var(--rule); padding: 36px 20px 50px; text-align: center; font-size: 14px; color: var(--muted); }
+footer .logo { font-size: 26px; display: inline-block; margin-bottom: 8px; }
+footer nav { display: flex; gap: 8px 20px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
+@media (max-width: 700px) { .story-copy { padding: 22px 20px; } .gift { padding: 26px 18px; } .row { grid-template-columns: minmax(0, 1fr) 84px; } .deck { font-size: 19px; } }
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="/ozer/magazine/">OZER</a>
+  <span class="label">MAGAZINE / 001</span>
+  <a class="back" href="/#ozer">← צוות השחר</a>
+</header>
+
+<main class="wrap">
+  <div class="mast">
+    <p class="mono">מגזין שבועי חינמי · גיליון 001 · שבת, 10.10.2026</p>
+    <h1>פחות ניירת,<br><span>יותר עסק.</span></h1>
+    <p class="deck">כל שבוע: משימה אחת שאפשר להוריד מהראש, כלי אחד שעובד בעברית, ושיעור אחד ממה שלמדנו כשסוכנים עובדים בעסקים אמיתיים.</p>
+  </div>
+  <figure class="cover"><img src="assets/cover.svg" width="1200" height="600" alt="קו דופק שעובר דרך שורת כלי משרד"></figure>
+
+  <p class="note">את רוב הזמן בעסק קטן לא אוכלים הלקוחות. אוכלים אותו הקבלות, הלידים שמחכים, הסיכומים שלא נכתבו וההודעות שצריך להעביר הלאה. OZER נולד מהעבודה הזאת, והמגזין הזה הוא מה שלמדנו בדרך. בלי הייפ, ובלי הבטחות שלא בדקנו בעצמנו.</p>
+
+  <div class="sec-h"><h2>בגיליון הזה</h2><span class="mono">4 כתבות · מחשבון</span></div>
+  <div class="stories">
+
+    <article class="story" id="silent">
+      <div class="story-copy">
+        <p class="mono">כתבת השער · שיעור מהשטח · 5 דקות</p>
+        <h2>האוטומציה הכי מסוכנת היא זו שנראית עובדת</h2>
+        <p>אוטומציה שנשברת בקול היא בעיה קטנה: מישהו רואה הודעת שגיאה ומתקן. הבעיה הגדולה היא אוטומציה שממשיכה "לעבוד" ומחזירה כלום.</p>
+        <p>שתי דוגמאות שקרו לנו. חיבור לחשבון בנק שהפסיק להחזיר תנועות בלי שום הודעת שגיאה: הדוח המשיך לצאת בזמן, פשוט ריק. ובמקרה אחר, ספק AI החליף את מודל ברירת המחדל שלו, וסוכן שעבד חודשים הפסיק לענות לבקשות. בשני המקרים, מה שתפס את התקלה לא היה הקוד. זה היה מנגנון שבודק שהסוכן באמת עשה משהו.</p>
+        <details class="more"><summary>איך בודקים את זה אצלכם</summary>
+          <p>שלוש שאלות לשאול על כל אוטומציה בעסק:</p>
+          <ol>
+            <li><b>מי יודע אם זה רץ אתמול?</b> אם התשובה היא "נראה לי", אין לכם ניטור.</li>
+            <li><b>מה קורה כשזה נכשל?</b> שגיאה שאף אחד לא קורא שווה לשתיקה.</li>
+            <li><b>מי מתקן, ותוך כמה זמן?</b> אוטומציה בלי בעלים היא חוב שמחכה ליפול.</li>
+          </ol>
+          <div class="box"><p><b>אצלנו:</b> כל סוכן כותב "דופק" אחרי כל ריצה. כשסוכן שותק יותר מהרגיל, נדלקת נורה אדומה, ובן אדם בודק למה. זה ההבדל בין "בנו לי אוטומציה" לבין "יש לי מערכת שעובדת".</p></div>
+        </details>
+      </div>
+    </article>
+
+    <article class="story" id="five">
+      <img src="assets/tasks.svg" width="1200" height="600" alt="">
+      <div class="story-copy">
+        <p class="mono">להוריד מהראש · 4 דקות</p>
+        <h2>חמש משימות משרד ששווה להעביר לסוכן השבוע</h2>
+        <p>לא צריך "לעשות AI לעסק". מתחילים ממשימה אחת שחוזרת כל יום, ברורה, ושכולם שונאים.</p>
+        <ul>
+          <li><b>ליד חדש לוואטסאפ של הנציג.</b> שם, טלפון, ומתי פנה. ליד שמחכה, מתקרר.</li>
+          <li><b>סיכום אחרי פגישה.</b> החלטות ומשימות עם אחראי, בוואטסאפ, כמה דקות אחרי שהשיחה נגמרת.</li>
+          <li><b>קבלות לרואה החשבון.</b> כל קבלה שמגיעה במייל עוברת לבד לתיבה הנכונה, ולא נשכחת בסוף החודש.</li>
+          <li><b>הקלטות לטקסט.</b> שולחים הקלטה, מקבלים טקסט בעברית שאפשר לחפש ולהעביר הלאה.</li>
+          <li><b>בריף בוקר.</b> הודעה אחת בבוקר: מה פתוח, מה באיחור, ומה חדש מאתמול.</li>
+        </ul>
+        <div class="box"><p><b>כלל אצבע:</b> אם אתם יכולים להסביר את המשימה בשלוש שורות, ואתם עושים אותה יותר מפעם בשבוע, היא מועמדת.</p></div>
+      </div>
+    </article>
+
+    <article class="story" id="human">
+      <img src="assets/approve.svg" width="1200" height="600" alt="">
+      <div class="story-copy">
+        <p class="mono">גבולות · 3 דקות</p>
+        <h2>מה לא נותנים לסוכן לעשות לבד</h2>
+        <p>סוכן טוב חוסך הרבה. סוכן בלי גבולות יכול לעלות ביוקר. אצלנו יש שלוש פעולות שתמיד עוברות דרך בן אדם:</p>
+        <ul>
+          <li><b>הודעה ללקוח.</b> הסוכן מכין טיוטה, ובן אדם אומר "כן" לפני שהיא יוצאת.</li>
+          <li><b>כסף.</b> הפקת חשבונית, תשלום או זיכוי, רק אחרי אישור מפורש.</li>
+          <li><b>מחיקה.</b> שום דבר לא נמחק לצמיתות בלי מישהו שבדק.</li>
+        </ul>
+        <p>זה מאט קצת. זה גם מה שמאפשר לתת לסוכן לעשות את כל השאר בלי לפחד.</p>
+      </div>
+    </article>
+
+    <article class="story" id="tool">
+      <img src="assets/voice.svg" width="1200" height="600" alt="">
+      <div class="story-copy">
+        <p class="mono">כלי השבוע · 3 דקות</p>
+        <h2>תמלול בעברית שרץ אצלכם, לא בענן של מישהו אחר</h2>
+        <p>ivrit.ai הוא פרויקט ישראלי פתוח שאוסף הקלטות בעברית ומאמן עליהן מודלים לזיהוי דיבור. המודלים שלו מבוססים על Whisper, ואפשר להריץ אותם על שרת משלכם.</p>
+        <p>למה זה חשוב לעסק: הקלטות של לקוחות, פגישות והודעות קוליות הן מידע רגיש. כשהתמלול רץ על השרת שלכם, ההקלטה לא יוצאת לשירות חיצוני.</p>
+        <div class="box"><p><b>אצלנו:</b> המתמלל של OZER בנוי על מודל של ivrit.ai. שולחים הקלטה בוואטסאפ, ומקבלים טקסט בעברית בערך באורך ההקלטה עצמה.</p></div>
+        <p class="src">מקור: <a href="https://www.ivrit.ai/" rel="noopener">ivrit.ai</a>, והמודלים שלהם ב-<a href="https://huggingface.co/ivrit-ai" rel="noopener">Hugging Face</a>.</p>
+      </div>
+    </article>
+  </div>
+
+  <section class="gift" id="calc" aria-labelledby="calc-h">
+    <p class="mono">המתנה שלכם לסוף השבוע · בלי הרשמה</p>
+    <h2 id="calc-h">כמה שעות משרד הולכות לכם בשבוע?</h2>
+    <p>מלאו הערכה גסה, בשעות לשבוע. החישוב קורה רק אצלכם בדפדפן, ושום דבר לא נשלח.</p>
+    <form class="calc" id="calc-form" onsubmit="return false">
+      <div class="row"><label for="h1">מענה ללידים ומעקב אחריהם</label><input id="h1" type="number" min="0" step="0.5" inputmode="decimal" value="3"></div>
+      <div class="row"><label for="h2">סיכומים ומשימות אחרי פגישות</label><input id="h2" type="number" min="0" step="0.5" inputmode="decimal" value="2"></div>
+      <div class="row"><label for="h3">קבלות, חשבוניות והעברה לרואה החשבון</label><input id="h3" type="number" min="0" step="0.5" inputmode="decimal" value="1.5"></div>
+      <div class="row"><label for="h4">העברת הודעות ותיאום בקבוצות</label><input id="h4" type="number" min="0" step="0.5" inputmode="decimal" value="2"></div>
+      <div class="row"><label for="h5">תיוק מסמכים, הקלטות וקבצים</label><input id="h5" type="number" min="0" step="0.5" inputmode="decimal" value="1"></div>
+      <div class="rate"><label for="rate">כמה שווה לכם שעה (₪)</label><input id="rate" type="number" min="0" step="10" inputmode="numeric" value="150"></div>
+    </form>
+    <div class="out" aria-live="polite">
+      <div><b id="o-week">9.5</b><span>שעות בשבוע</span></div>
+      <div><b id="o-month">41</b><span>שעות בחודש</span></div>
+      <div><b id="o-cost">₪6,175</b><span>שווי הזמן הזה בחודש</span></div>
+    </div>
+    <p class="fine">המספרים הם מה שאתם הזנתם, לא הבטחה לחיסכון. החודש מחושב כ-4.33 שבועות. רוצים לדעת כמה מזה סוכן יכול להוריד? <a href="/#contact" style="color:#C9A24B">שיחת רנטגן של 20 דקות</a>, בלי עלות.</p>
+  </section>
+
+  <div class="next">
+    <p class="mono">בגיליון הבא</p>
+    <h2>איך נראה בריף בוקר טוב</h2>
+    <p>הודעה אחת שאתם קוראים עם הקפה ויודעים מה חשוב היום. מה נכנס, מה נשאר בחוץ, ולמה רוב הבריפים ארוכים מדי.</p>
+  </div>
+</main>
+
+<footer>
+  <a class="logo" href="/ozer/magazine/">OZER</a>
+  <div>המשרד האחורי של צוות השחר · מגזין שבועי חינמי</div>
+  <nav><a href="/">צוות השחר</a><a href="/#ozer">OZER</a><a href="/groot/magazine/">המגזין של GROOT</a></nav>
+</footer>
+
+<script>
+(function () {
+  var ids = ["h1", "h2", "h3", "h4", "h5"], el = function (i) { return document.getElementById(i); };
+  var num = function (i) { var n = parseFloat(el(i).value); return isFinite(n) && n > 0 ? n : 0; };
+  function run() {
+    var week = ids.reduce(function (s, i) { return s + num(i); }, 0), month = week * 4.33;
+    el("o-week").textContent = (Math.round(week * 10) / 10).toLocaleString("he-IL");
+    el("o-month").textContent = Math.round(month).toLocaleString("he-IL");
+    el("o-cost").textContent = "₪" + Math.round(month * num("rate")).toLocaleString("en-US");
+  }
+  el("calc-form").addEventListener("input", run); run();
+})();
+</script>
+</body>
+</html>

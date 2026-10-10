@@ -1,0 +1,95 @@
+/* Dawn Crew public site. The umbrella is warm dawn; each line keeps its own brand inside its block:
+   GROOT navy + sky blue (Hila's magazine), דפי placeholder (Adva to brand), OZER petrol + brass (the OZER portal). */
+:root {
+  --bg: #F7F2EB; --surface: #FFFCF8; --ink: #1C1915; --ink-soft: #4A443C; --muted: #776F64; --rule: #E2D9CC;
+  --dawn: #C9572B; --dawn-soft: #F6E1D4;
+  --display: "Secular One", "IBM Plex Sans Hebrew", sans-serif; --body: "IBM Plex Sans Hebrew", "Segoe UI", system-ui, sans-serif;
+  --groot-bg: #071522; --groot-panel: #0d2439; --groot-ink: #ecf3fa; --groot-blue: #9dd4ff;
+  --dafi-bg: #FFF6EE; --dafi-ink: #2A1B12; --dafi-accent: #B4472E;
+  --ozer-bg: #E9ECEF; --ozer-ink: #10171F; --ozer-petrol: #1D5B78; --ozer-brass: #8C6410;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #13110E; --surface: #1C1915; --ink: #F1EBE2; --ink-soft: #CFC6B9; --muted: #9D9487; --rule: #36302A;
+  --dawn: #F08A5D; --dawn-soft: #3A2318; --dafi-bg: #22170F; --dafi-ink: #F6E8DC; --dafi-accent: #EE8A6E;
+  --ozer-bg: #0C1218; --ozer-ink: #E8EDF2; --ozer-petrol: #4E97B8; --ozer-brass: #C9A24B; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #13110E; --surface: #1C1915; --ink: #F1EBE2; --ink-soft: #CFC6B9; --muted: #9D9487; --rule: #36302A;
+  --dawn: #F08A5D; --dawn-soft: #3A2318; --dafi-bg: #22170F; --dafi-ink: #F6E8DC; --dafi-accent: #EE8A6E;
+  --ozer-bg: #0C1218; --ozer-ink: #E8EDF2; --ozer-petrol: #4E97B8; --ozer-brass: #C9A24B; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.75 var(--body); }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; }
+.sketch { background: repeating-linear-gradient(-45deg, var(--dawn-soft) 0 10px, transparent 10px 20px); border-bottom: 1px dashed var(--dawn); font-size: 13.5px; text-align: center; padding: 6px 16px; color: var(--ink-soft); }
+
+/* top */
+.top { display: flex; align-items: center; gap: 18px; padding-block: 18px; flex-wrap: wrap; }
+.mark { font-family: var(--display); font-size: 24px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.mark .sun { width: 30px; height: 30px; }
+.top nav { display: flex; gap: 4px 18px; flex-wrap: wrap; font-size: 15px; margin-inline-start: auto; }
+.top nav a { text-decoration: none; color: var(--ink-soft); }
+.top nav a:hover { color: var(--dawn); }
+
+/* hero */
+.hero { padding-block: 56px 72px; display: grid; gap: 22px; max-width: 860px; }
+.hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 7vw, 76px); line-height: 1.08; margin: 0; }
+.hero h1 span { color: var(--dawn); }
+.hero p { font-size: 20px; color: var(--ink-soft); margin: 0; max-width: 680px; }
+.cta { display: inline-flex; align-items: center; gap: 8px; background: var(--ink); color: var(--bg); text-decoration: none; padding: 13px 22px; font-weight: 700; width: fit-content; }
+.cta.ghost { background: transparent; color: var(--ink); border: 1px solid var(--ink); }
+.ctas { display: flex; gap: 10px; flex-wrap: wrap; }
+.eyebrow { font-size: 13px; letter-spacing: .14em; color: var(--dawn); margin: 0 0 8px; }
+section { padding-block: 56px; }
+h2 { font-family: var(--display); font-weight: 400; font-size: clamp(28px, 4vw, 42px); line-height: 1.2; margin: 0 0 14px; }
+.lede { font-size: 19px; color: var(--ink-soft); max-width: 720px; }
+
+/* the three lines */
+.lines { display: grid; gap: 18px; }
+.line { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 28px; padding: 34px; align-items: center; }
+.line h3 { margin: 0 0 6px; font-size: 34px; line-height: 1.1; }
+.line .role { font-size: 14px; letter-spacing: .14em; opacity: .8; margin: 0 0 14px; }
+.line ul { margin: 0; padding-inline-start: 20px; display: grid; gap: 6px; }
+.line .links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+.line .links a { font-size: 15px; padding: 7px 14px; text-decoration: none; border: 1px solid currentColor; }
+.line.groot { background: var(--groot-bg); color: var(--groot-ink); }
+.line.groot .role, .line.groot .links a { color: var(--groot-blue); }
+.line.groot img { width: 170px; filter: none; }
+.line.dafi { background: var(--dafi-bg); color: var(--dafi-ink); border: 1px dashed var(--dafi-accent); }
+.line.dafi h3 { font-family: var(--display); font-weight: 400; color: var(--dafi-accent); font-size: 44px; }
+.line.dafi .role, .line.dafi .links a { color: var(--dafi-accent); }
+.line.ozer { background: var(--ozer-bg); color: var(--ozer-ink); font-family: "Assistant", var(--body); }
+.line.ozer h3 { font-family: "Suez One", serif; font-weight: 400; color: var(--ozer-petrol); font-size: 46px; }
+.line.ozer .role { color: var(--ozer-brass); font-family: "Azeret Mono", monospace; }
+.line.ozer .links a { color: var(--ozer-petrol); }
+.todo { font-size: 13px; opacity: .75; margin-top: 10px; }
+
+/* control room + steps */
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 20px; }
+.card { background: var(--surface); border: 1px solid var(--rule); padding: 20px 22px; }
+.card h3 { margin: 0 0 6px; font-size: 19px; }
+.card p { margin: 0; color: var(--ink-soft); }
+.steps { counter-reset: s; }
+.steps .card::before { counter-increment: s; content: counter(s); font-family: var(--display); font-size: 34px; color: var(--dawn); display: block; line-height: 1; margin-bottom: 8px; }
+
+/* magazines */
+.mags { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 20px; }
+.mag { display: grid; gap: 6px; padding: 24px; text-decoration: none; min-height: 190px; align-content: end; }
+.mag b { font-size: 26px; }
+.mag.groot { background: var(--groot-bg); color: var(--groot-ink); }
+.mag.groot span { color: var(--groot-blue); }
+.mag.ozer { background: var(--ozer-petrol); color: #fff; }
+.mag.ozer b { font-family: "Suez One", serif; font-weight: 400; }
+
+/* contact + footer */
+.contact { background: var(--ink); color: var(--bg); padding: 44px 34px; display: grid; gap: 12px; }
+.contact h2 { color: var(--bg); }
+.contact .cta { background: var(--dawn); color: #fff; }
+footer { border-top: 1px solid var(--rule); padding-block: 30px 50px; font-size: 14px; color: var(--muted); display: flex; gap: 10px 22px; flex-wrap: wrap; }
+footer a { color: var(--muted); }
+
+@media (max-width: 760px) {
+  .line { grid-template-columns: 1fr; padding: 24px 20px; gap: 14px; }
+  .hero { padding-block: 34px 44px; }
+  section { padding-block: 40px; }
+}

@@ -1,0 +1,18 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/team", "destination": "https://backoffice.thedawncrew.com/", "permanent": false },
+    { "source": "/d/:slug", "destination": "https://backoffice.thedawncrew.com/d/:slug", "permanent": false },
+    { "source": "/groot/magazine", "destination": "/groot/magazine/", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/q/:slug", "destination": "https://dawncrew.vercel.app/q/:slug" },
+    { "source": "/p/:path*", "destination": "https://dawncrew.vercel.app/p/:path*" },
+    { "source": "/api/quote", "destination": "https://dawncrew.vercel.app/api/quote" },
+    { "source": "/quote.css", "destination": "https://dawncrew.vercel.app/quote.css" },
+    { "source": "/quote.js", "destination": "https://dawncrew.vercel.app/quote.js" },
+    { "source": "/app.css", "destination": "https://dawncrew.vercel.app/app.css" },
+    { "source": "/groot/magazine/", "destination": "https://groot-magazine.netlify.app/" },
+    { "source": "/groot/magazine/:path*", "destination": "https://groot-magazine.netlify.app/:path*" }
+  ]
+}

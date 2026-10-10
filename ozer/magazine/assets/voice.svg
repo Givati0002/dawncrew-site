@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="גל קול שהופך לשורות טקסט">
+  <rect width="1200" height="600" fill="#F1F4F6"/>
+  <g stroke="#1D5B78" stroke-width="10" stroke-linecap="round">
+    <path d="M130 300v0M170 270v60M210 230v140M250 190v220M290 250v100M330 210v180M370 160v280M410 240v120M450 280v40"/>
+  </g>
+  <path d="M520 300H660" stroke="#8C6410" stroke-width="6" stroke-linecap="round"/><path d="M640 278l26 22-26 22" fill="none" stroke="#8C6410" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#1D5B78"><rect x="730" y="200" width="340" height="18" rx="9"/><rect x="790" y="250" width="280" height="18" rx="9"/><rect x="750" y="300" width="320" height="18" rx="9"/><rect x="830" y="350" width="240" height="18" rx="9"/><rect x="770" y="400" width="300" height="18" rx="9" opacity=".5"/></g>
+</svg>
