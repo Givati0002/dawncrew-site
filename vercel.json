@@ -19,6 +19,10 @@
   ],
   "rewrites": [
     {
+      "source": "/api/page",
+      "destination": "https://dawncrew.vercel.app/api/page"
+    },
+    {
       "source": "/live/:slug",
       "destination": "https://dawncrew.vercel.app/live/:slug"
     },
